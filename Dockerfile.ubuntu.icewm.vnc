@@ -13,14 +13,14 @@ LABEL io.k8s.description="Headless VNC Container with IceWM window manager, fire
 
 ## Connection ports for controlling the UI:
 # VNC port:5901
-# noVNC webport, connect via http://IP:6901/?password=vncpassword
+# noVNC webport, connect via http://IP:6901/?password=123
 ENV DISPLAY=:1 \
     VNC_PORT=5901 \
     NO_VNC_PORT=6901
 EXPOSE $VNC_PORT $NO_VNC_PORT
 
 ### Envrionment config
-ENV HOME=/headless \
+ENV HOME=/root \
     TERM=xterm \
     STARTUPDIR=/dockerstartup \
     INST_SCRIPTS=/headless/install \
@@ -28,7 +28,7 @@ ENV HOME=/headless \
     DEBIAN_FRONTEND=noninteractive \
     VNC_COL_DEPTH=24 \
     VNC_RESOLUTION=1280x1024 \
-    VNC_PW=vncpassword \
+    VNC_PW=123 \
     VNC_VIEW_ONLY=false
 WORKDIR $HOME
 
@@ -74,4 +74,4 @@ RUN apt-get autoclean \
 USER root
 
 ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
-CMD ["--wait"]
+CMD ["--tail-log"]
