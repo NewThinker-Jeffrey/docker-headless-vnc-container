@@ -29,3 +29,5 @@ docker run --name ${TEST_CONTAINER_NAME} --gpus all \
 #   https://github.com/NVIDIA/nvidia-docker/issues/1447#issuecomment-757034464
 #   https://bbs.archlinux.org/viewtopic.php?pid=2003116#p2003116 中的方式，
 # The "--device" lines should be removed if you didn't make that "no-cgroups" change.
+
+# maybe need "sudo systemctl restart docker"
