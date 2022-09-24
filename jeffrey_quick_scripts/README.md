@@ -6,8 +6,17 @@
 
 > 注意：编译该Docker镜像时需要下载 tigervnc-1.10.0.x86_64.tar.gz，为防止其下载链接失效，将该文件放在了本目录下备用。
 
+
+
 当前状态：
 
 - icewm 桌面总是提示crash；
 - xfce 通过tigervnc 可连接，但网页不可连接
 
+-----------
+
+补充说明(新)：
+1. 可以认为icewm相关的脚本都废了，用不起来；
+2. ```./test_ubuntu_xfce.sh``` 脚本分成了两个
+  - ```test_ubuntu_xfce__normal.sh``` 适用于22.04主机,正常case
+  - ```test_ubuntu_xfce__special_fix.sh``` 适用于 21.10主机，因为系统问题做了个适配
