@@ -1,4 +1,15 @@
 
+----------
+
+colmap:
+
+- 通过 ```build_ubuntu_xfce_COLMAP.sh``` 脚本可构建出支持COLMAP编译运行,且带xfce风格桌面的vnc-server。
+- 通过 ```./test_ubuntu_xfce_COLMAP.sh``` 可启动相应的container示例，并通过 tigervnc 或web浏览器访问他们的桌面。
+- 进入 container 后, clone 下 ceres 和 COLMAP 代码,并cmake编译、安装. 具体见 COLMAP文档: https://colmap.github.io/install.html#linux
+
+
+----------
+
 脚本说明
 - 通过 ```./build_ubuntu_xfce.sh``` 和 ```通过 ```./build_ubuntu_icewm.sh```这两个脚本可分别构建出xfce和icewm风格桌面的vnc-server。
 - 通过 ```./test_ubuntu_xfce.sh``` 和 ```通过 ```./test_ubuntu_icewm.sh``` 可分别启动相应的container示例，并通过 tigervnc 或web浏览器访问他们的桌面。
