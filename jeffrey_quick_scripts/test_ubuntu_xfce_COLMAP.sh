@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IMG_NAME=ubuntu_vnc_xfce_cuda_COLMAP
+IMG_NAME=ubuntu_vnc_xfce_cuda_colmap
 TEST_CONTAINER_NAME=${IMG_NAME}-container-test
 
 docker kill ${TEST_CONTAINER_NAME}
